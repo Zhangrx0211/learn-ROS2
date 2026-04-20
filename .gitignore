@@ -1,0 +1,4 @@
+# ROS2 工作空间必须忽略的目录
+build/
+install/
+log/
