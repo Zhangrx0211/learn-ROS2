@@ -1,0 +1,6 @@
+
+int32 num  #目标请求
+---
+int32 sum  #最终结果
+---
+float64 progress #过程反馈

@@ -12,9 +12,14 @@ find_package(ament_cmake REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 find_package(rosidl_default_generators REQUIRED)
+find_package(action_msgs REQUIRED)
+
+#为接口文件生成源码
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Student.msg"
   "srv/Add.srv"
+  "action/Progress.action"
+  DEPENDENCIES action_msgs  # 这行是 action 接口必须的！
 )
 
 
@@ -31,4 +36,5 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+ament_export_dependencies(rosidl_default_runtime)
 ament_package()
