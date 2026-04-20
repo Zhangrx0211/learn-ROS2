@@ -29,9 +29,10 @@ class MinimalService(Node):
 
     # ***3-2.处理请求数据并响应结果。
     def add_callback(self, request, response):
+        
         response.sum = request.num1 + request.num2
         self.get_logger().info('请求数据:(%d,%d),响应结果:%d' % (request.num1, request.num2, response.sum))
-        return response 
+        return response
 
 
 def main():

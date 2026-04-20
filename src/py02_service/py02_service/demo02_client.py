@@ -59,7 +59,7 @@ def main():
     except Exception as e:
         client.get_logger().info('服务请求失败： %r' % (e,))
     else:
-        client.get_logger().info('响应结果： %d + %d = %d' %(response.sum))
+        client.get_logger().info('响应结果： %d + %d = %d' %( response.sum))
 
     # 5.释放资源。
     rclpy.shutdown()
