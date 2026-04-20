@@ -18,7 +18,7 @@ from rclpy.node import Node
 from base_interfaces_demo.srv import Add
 import sys
 
-# 3.定义节点类；
+# 3.定义节点类； response.sum))
 class MinimalClient(Node):
     
 
